@@ -1,6 +1,7 @@
 var React = require("react");
 var ReactDom = require("react-dom");
 var PropTypes = require("prop-types");
+
 require("./index.css");
 
 var Main = require("./components/main.js");

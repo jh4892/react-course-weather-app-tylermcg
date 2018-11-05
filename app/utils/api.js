@@ -20,12 +20,12 @@ module.exports = {
     console.log(encodedURI);
 
     return axios.get(encodedURI).then(function(response) {
-      return response.data.items;
+      return response.data;
     });
   },
   get5dayForecast: function(city) {
     var encodedURI = window.encodeURI(
-      "https://api.openweathermap.org/data/2.5/forecast/daily?q=" +
+      "https://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
         "&type=accurate&APPID=" +
         apiKey +
@@ -35,7 +35,7 @@ module.exports = {
     console.log(encodedURI);
 
     return axios.get(encodedURI).then(function(response) {
-      return response.data.items;
+      return response.data;
     });
   }
 };

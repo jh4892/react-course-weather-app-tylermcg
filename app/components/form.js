@@ -2,8 +2,6 @@ var React = require("react");
 var ReactDom = require("react-dom");
 var PropTypes = require("prop-types");
 
-var api = require("../utils/api");
-
 class Form extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +15,7 @@ class Form extends React.Component {
   handleSubmit() {
     console.log(this.state.city);
 
-    api.getCurrentWeather(this.state.city);
-    // api.get5dayForecast(this.state.city);
+    this.props.onSubmitZipcode(this.state.city);
   }
 
   handleChange(event) {
@@ -34,7 +31,7 @@ class Form extends React.Component {
 
   render() {
     var style = {
-      flexDirection: this.props.isInNav ? "row" : "column"
+      flexDirection: this.props.direction
     };
 
     return (
