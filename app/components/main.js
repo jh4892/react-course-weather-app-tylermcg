@@ -53,7 +53,7 @@ class Main extends React.Component {
                 <React.Fragment>
                   <div
                     className="home-container"
-                    style={{ backgroundImage: "url('/images/pattern.svg')" }}
+                    style={{ backgroundImage: "url('app/images/pattern.svg')" }}
                   >
                     <h1 className="header">Enter a City and State</h1>
                     <Form
