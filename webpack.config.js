@@ -24,6 +24,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "app/index.html"
     }),
-    new CopyWebpackPlugin([{ from: "app/images", to: "app/images" }])
+    new CopyWebpackPlugin([{ from: "app/images/", to: "app/images/" }])
   ]
 };
