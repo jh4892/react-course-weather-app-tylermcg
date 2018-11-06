@@ -46,7 +46,7 @@ class Detail extends React.Component {
             <p>
               max temp: {Math.round(convertTemp(props.main.temp_max), 1)} &deg;C
             </p>
-            <p>humidity: {props.humidity}</p>
+            <p>humidity: {props.main.humidity}</p>
           </div>
         </div>
       );

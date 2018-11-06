@@ -6,11 +6,14 @@ var Form = require("./Form");
 var ReactRouter = require("react-router-dom");
 var BrowserRouter = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
 var Forecast = require("./forecast");
 var Detail = require("./detail");
 
 class Main extends React.Component {
   render() {
+    var style = { cursor: "pointer" };
+
     return (
       <BrowserRouter>
         <React.Fragment>
@@ -19,7 +22,14 @@ class Main extends React.Component {
               return (
                 <React.Fragment>
                   <div className="navbar">
-                    <h1>Inventive Weather App</h1>
+                    <h1
+                      style={style}
+                      onClick={function() {
+                        props.history.push("/");
+                      }}
+                    >
+                      Inventive Weather App
+                    </h1>
                     <Form
                       direction="row"
                       onSubmitZipcode={function(city) {

@@ -24,12 +24,21 @@ module.exports = {
     });
   },
   get5dayForecast: function(city) {
+    // // api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=xml&units=metric&cnt=7
+    // var encodedURI = window.encodeURI(
+    //   "https://api.openweathermap.org/data/2.5/forecast/daily?q=" +
+    //     city +
+    //     "&type=accurate&APPID=" +
+    //     apiKey +
+    //     "&cnt=15"
+    // );
+
     var encodedURI = window.encodeURI(
       "https://api.openweathermap.org/data/2.5/forecast?q=" +
         city +
         "&type=accurate&APPID=" +
         apiKey +
-        "&cnt=5"
+        "&cnt=15"
     );
 
     console.log(encodedURI);

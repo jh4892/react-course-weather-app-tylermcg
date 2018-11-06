@@ -32,7 +32,7 @@ function getDate(unixTimestmap) {
   var date = new Date(unixTimestmap * 1000);
   var day = daysMap[date.getDay()];
   var month = monthsMap[date.getMonth()] + " " + date.getDate();
-  return day + ", " + month;
+  return date.getHours() + ":00, " + day + ", " + month;
 }
 
 module.exports = {

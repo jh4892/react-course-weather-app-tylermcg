@@ -7,6 +7,8 @@ var getDate = utils.getDate;
 var convertTemp = utils.convertTemp;
 
 function Day(props) {
+  console.log(props.day.dt);
+
   var date = getDate(props.day.dt);
   var icon = props.day.weather[0].icon;
   return (
@@ -98,7 +100,11 @@ class Forecast extends React.Component {
       <React.Fragment>
         <div
           className="home-container"
-          style={{ backgroundImage: "url('app/images/pattern.svg')" }}
+          style={{
+            backgroundImage: "url('app/images/pattern.svg')",
+            backgroundRepeat: "repeat",
+            overflow: "scroll"
+          }}
         >
           <h1>Forecast</h1>
           {!this.state.data ? (
