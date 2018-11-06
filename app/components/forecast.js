@@ -7,7 +7,7 @@ var getDate = utils.getDate;
 var convertTemp = utils.convertTemp;
 
 function Day(props) {
-  console.log(props.day.dt);
+  // console.log(props.day.dt);
 
   var date = getDate(props.day.dt);
   var icon = props.day.weather[0].icon;
