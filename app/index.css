@@ -13,7 +13,6 @@ body {
 
 .container,
 #app {
-  color: white;
   height: 100%;
   width: 100%;
 }
@@ -58,7 +57,6 @@ body {
 }
 
 .form-control {
-  margin: 10px;
   display: block;
   width: 100%;
   height: 34px;
@@ -84,7 +82,6 @@ body {
   font-weight: 100;
 }
 
-.forecast-container,
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -94,8 +91,41 @@ body {
   padding: 5px;
 }
 
-.mijnForm {
+.forecast-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.dayContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 35px;
+}
+.forecast-header {
+  font-size: 65px;
+  color: #333;
+  font-weight: 100;
+  text-align: center;
+}
+.subheader {
+  font-size: 30px;
+  color: #333;
+  font-weight: 100;
+}
+.weather {
+  height: 130px;
+}
+
+.description-container {
+  font-size: 34px;
+  font-weight: 100;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
 }

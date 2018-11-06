@@ -24,7 +24,8 @@ var monthsMap = {
 };
 
 function convertTemp(kelvin) {
-  return (kelvin - 273.15) * 1.8 + 32.0;
+  // return (kelvin - 273.15) * 1.8 + 32.0; // To Fahrenheit
+  return kelvin - 273.15; // To Celsius
 }
 
 function getDate(unixTimestmap) {

@@ -17,7 +17,7 @@ module.exports = {
         apiKey
     );
 
-    console.log(encodedURI);
+    // console.log(encodedURI);
 
     return axios.get(encodedURI).then(function(response) {
       return response.data;

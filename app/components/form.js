@@ -10,16 +10,17 @@ class Form extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleSubmit() {
-    console.log(this.state.city);
+    // console.log(this.state.city);
 
     this.props.onSubmitZipcode(this.state.city);
   }
 
   handleChange(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     var value = event.target.value;
 
     this.setState(function() {
@@ -29,10 +30,25 @@ class Form extends React.Component {
     });
   }
 
+  handleKeyPress(event) {
+    if (event.key === "Enter") {
+      this.handleSubmit();
+    }
+  }
+
   render() {
     var style = {
-      flexDirection: this.props.direction
+      flexDirection: this.props.direction,
+      display: "flex"
     };
+
+    var buttonStyle = {};
+
+    if (this.props.direction === "row") {
+      buttonStyle.marginLeft = "10px";
+    } else {
+      buttonStyle.marginTop = "10px";
+    }
 
     return (
       <div className="mijnForm" style={style}>
@@ -43,8 +59,13 @@ class Form extends React.Component {
           autoComplete="off"
           value={this.state.city}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
         />
-        <button className="btn btn-success" onClick={this.handleSubmit}>
+        <button
+          style={buttonStyle}
+          className="btn btn-success"
+          onClick={this.handleSubmit}
+        >
           Get Weather
         </button>
       </div>

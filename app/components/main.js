@@ -19,7 +19,7 @@ class Main extends React.Component {
               return (
                 <React.Fragment>
                   <div className="navbar">
-                    <h1>Clever Title</h1>
+                    <h1>Inventive Weather App</h1>
                     <Form
                       direction="row"
                       onSubmitZipcode={function(city) {
@@ -61,22 +61,9 @@ class Main extends React.Component {
             }}
           />
 
-          <Route
-            path="/forecast"
-            render={function(props) {
-              return (
-                <Forecast
-                  onOpenDetail={function(city) {
-                    props.history.push({
-                      pathname: "detail",
-                      search: "?city=" + city
-                    });
-                  }}
-                />
-              );
-            }}
-          />
-          <Route path="/detail" component={Detail} />
+          <Route path="/forecast" component={Forecast} />
+
+          <Route path="/details/:city" component={Detail} />
         </React.Fragment>
       </BrowserRouter>
     );

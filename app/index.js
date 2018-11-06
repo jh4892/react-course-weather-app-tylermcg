@@ -1,6 +1,7 @@
 var React = require("react");
 var ReactDom = require("react-dom");
 var PropTypes = require("prop-types");
+require("bootstrap/dist/css/bootstrap.min.css");
 
 require("./index.css");
 
