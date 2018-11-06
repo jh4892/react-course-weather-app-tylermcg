@@ -13,7 +13,7 @@
     "create": "webpack",
     "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV='production' webpack",
+    "build": "NODE_ENV='production' webpack -p",
     "build-for-windows": "set NODE_ENV='production' && webpack",
     "firebase-init": "firebase login && firebase init",
     "deploy": "npm run build && firebase deploy"

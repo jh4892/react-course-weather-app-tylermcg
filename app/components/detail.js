@@ -13,7 +13,7 @@ function DayItem(props) {
     <div onClick={props.onClick} className="dayContainer">
       <img
         className="weather"
-        src={"/app/images/weather-icons/" + icon + ".svg"}
+        src={"/images/weather-icons/" + icon + ".svg"}
         alt="Weather"
       />
       <h2 className="subheader">{date}</h2>

@@ -15,7 +15,7 @@ function Day(props) {
     <div className="dayContainer" onClick={props.onClick}>
       <img
         className="weather"
-        src={"./app/images/weather-icons/" + icon + ".svg"}
+        src={"/images/weather-icons/" + icon + ".svg"}
         alt="Weather"
       />
       <h2 className="subheader">
@@ -101,7 +101,7 @@ class Forecast extends React.Component {
         <div
           className="home-container"
           style={{
-            backgroundImage: "url('app/images/pattern.svg')",
+            backgroundImage: "url('/images/pattern.svg')",
             backgroundRepeat: "repeat",
             overflow: "scroll"
           }}
